@@ -58,11 +58,11 @@
     padding: 2px 16px;
   }
   /* Turn off parallax scrolling for tablets and phones */
-  @media only screen and (max-device-width: 1024px) {
+  /* @media only screen and (max-device-width: 1024px) {
     .bgimg1 {
       background-attachment: scroll;
     }
-  }
+  } */
 </style>
 
 <div class="bgimg1">
