@@ -24,7 +24,7 @@
   }
 
   .bgimg1 {
-    background-image: url("https://scontent-lga3-1.cdninstagram.com/vp/1387ec8e0ebbd2a40b965fbe05e88f2d/5DB0432E/t51.2885-15/e35/51762062_358777364977782_4229431296205314296_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com");
+    background-image: url("https://drive.google.com/uc?export=download&id=1iny3jfjv5lBapozv3Jx614HkQTBUtIpZ");
     min-height: 100%;
   }
 
@@ -63,11 +63,13 @@
     padding: 2px 16px;
   }
   /* Turn off parallax scrolling for tablets and phones */
-  /* @media only screen and (max-device-width: 1024px) {
+  @media only screen and (max-width: 480px) {
     .bgimg1 {
+      background-image: url("https://drive.google.com/uc?export=download&id=1_JJZeI8seclFvmZKRodUi9PKflnfMXGM");
       background-attachment: scroll;
     }
-  } */
+  }
+  
 </style>
 
 <div class="bgimg1">
