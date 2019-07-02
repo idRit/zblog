@@ -34,6 +34,7 @@
     top: 50%;
     width: 100%;
     text-align: center;
+    display: flex;
   }
 
   .caption span.border {
@@ -42,6 +43,10 @@
     padding: 18px;
     font-size: 25px;
     letter-spacing: 10px;
+  }
+
+  .zlogo {
+    margin: auto;
   }
 
   .card {
@@ -67,7 +72,14 @@
 
 <div class="bgimg1">
   <div class="caption">
-    <span class="border"> {name} </span>
+    <img
+      class="zlogo"
+      width="75%"
+      height="75%"
+      src="https://drive.google.com/uc?export=download&id=1OQD-t5-CHCmGp1IqqVAAfVGLoIG1eouo"
+      alt="" />
+
+    <!-- <span class="border"> {name} </span> -->
   </div>
 </div>
 
