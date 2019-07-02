@@ -153,20 +153,6 @@
         <button>Read more</button>
       </div>
     </article>
-    <article class="card">
-      <img
-        src="https://drive.google.com/uc?export=download&id=1iny3jfjv5lBapozv3Jx614HkQTBUtIpZ"
-        alt="Sample photo" />
-      <div class="text">
-        <h3>Dynamically Procrastinate</h3>
-        <p>
-          Completely synergize resource taxing relationships via premier niche
-          markets.
-        </p>
-        <button>Read more</button>
-      </div>
-    </article>
-    
   </div>
 </div>
 
@@ -175,13 +161,15 @@
   10px;text-align: justify;">
   <h3 style="text-align:center;">Contact Me</h3>
   <div class="footerarea">
-    <a class="footeritem" href="mailto:someone@example.com">
-      someone@example.com
+    <a class="footeritem" href="mailto:zeddshaikh@gmail.com">
+      zeddshaikh@gmail.com
     </a>
     <a class="footeritem" href="https://www.instagram.com/zeddshaikh/">
       instagram
     </a>
-    <a class="footeritem" href="mailto:someone@example.com">reddit</a>
-    <a class="footeritem" href="mailto:someone@example.com">quora</a>
+    <a class="footeritem" href="https://www.twitter.com/zeddshaikh/">twitter</a>
+    <a class="footeritem" href="https://www.reddit.com/user/zeddshaikh">
+      reddit
+    </a>
   </div>
 </footer>
