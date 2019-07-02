@@ -102,6 +102,9 @@
     .bgimg1 {
       background-image: url("https://drive.google.com/uc?export=download&id=1_JJZeI8seclFvmZKRodUi9PKflnfMXGM");
     }
+    .card {
+      width: 420px;
+    }
   }
 </style>
 
@@ -163,32 +166,7 @@
         <button>Read more</button>
       </div>
     </article>
-    <article class="card">
-      <img
-        src="https://drive.google.com/uc?export=download&id=1iny3jfjv5lBapozv3Jx614HkQTBUtIpZ"
-        alt="Sample photo" />
-      <div class="text">
-        <h3>Dynamically Procrastinate</h3>
-        <p>
-          Completely synergize resource taxing relationships via premier niche
-          markets.
-        </p>
-        <button>Read more</button>
-      </div>
-    </article>
-    <article class="card">
-      <img
-        src="https://drive.google.com/uc?export=download&id=1iny3jfjv5lBapozv3Jx614HkQTBUtIpZ"
-        alt="Sample photo" />
-      <div class="text">
-        <h3>Dynamically Procrastinate</h3>
-        <p>
-          Completely synergize resource taxing relationships via premier niche
-          markets.
-        </p>
-        <button>Read more</button>
-      </div>
-    </article>
+    
   </div>
 </div>
 
