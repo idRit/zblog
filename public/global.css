@@ -3,7 +3,7 @@ html, body {
 	margin: 0;
 	font: myFirstFont;
 }
- 
+
 a {
 	color: rgb(0, 100, 200);
 	text-decoration: none;
@@ -29,7 +29,7 @@ input, button, select, textarea {
 	box-sizing: border-box;
 	border: 1px solid #ccc;
 	border-radius: 2px;
-}  
+}
 
 input:disabled {
 	color: #ccc;
@@ -58,6 +58,18 @@ button:focus {
 	src: url(Minecraft.ttf);
 }
 
-* { 
+* {
 	font-family: myFirstFont;
 }
+
+body {
+	background-color: black;
+	color: white;
+}
+
+@media screen and (prefers-color-scheme: light) {
+	body {
+		background-color: white;
+		color: black;
+	}
+} 
