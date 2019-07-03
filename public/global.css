@@ -65,7 +65,7 @@ button:focus {
 
 body {
 	background-color: black;
-	color: white;
+	color: white; 
 }
 
 body:before {

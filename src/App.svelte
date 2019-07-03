@@ -2,6 +2,8 @@
   export let name;
   export let baseUrl;
 
+  import { onMount } from "svelte";
+
   let aboutMe = "";
   let aboutMePromise = getAboutMe();
 
@@ -11,17 +13,17 @@
     console.log(respo.content);
     return respo.content;
   }
+
+  let allPosts = [];
+  onMount(async () => {
+    const res = await fetch(baseUrl + "api/getAllBlogs");
+    allPosts = await res.json();
+    allPosts.pop();
+    console.log(allPosts);
+  });
 </script>
 
 <style>
-  /* .caption span.border {
-    background-color: #111;
-    color: #fff;
-    padding: 18px;
-    font-size: 25px;
-    letter-spacing: 10px;
-  } */
-
   .bgimg1,
   .bgimg2 {
     position: relative;
@@ -49,6 +51,15 @@
     width: 100%;
     text-align: center;
     display: flex;
+  }
+
+  .caption span.border {
+    background-color: #111;
+    color: #fff;
+    padding: 18px;
+    font-size: 25px;
+    letter-spacing: 10px;
+    margin: auto;
   }
 
   .footerarea {
@@ -97,6 +108,13 @@
   .card:nth-child(1) {
     width: 420px;
   }
+  .long-and-truncated {
+    flex: 1;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
   @media only screen and (max-width: 480px) {
     .bgimg1 {
@@ -140,19 +158,24 @@
     Recent Reads
   </h3>
   <div class="cards-container">
-    <article class="card">
-      <img
-        src="https://drive.google.com/uc?export=download&id=1iny3jfjv5lBapozv3Jx614HkQTBUtIpZ"
-        alt="Sample photo" />
-      <div class="text">
-        <h3>Dynamically Procrastinate</h3>
-        <p>
-          Completely synergize resource taxing relationships via premier niche
-          markets.
-        </p>
-        <button>Read more</button>
+    {#if allPosts.length === 0}
+      <div class="caption">
+        <span class="border"> Comeback soon for posts! </span>
       </div>
-    </article>
+    {:else}
+      {#each allPosts as post}
+        <article class="card">
+          <img src={post.coverPhoto} alt="Sample photo" />
+          <div class="text">
+            <h3>{post.title}</h3>
+            <p class="long-and-truncated">
+              {@html post.content.replace(/<[^>]*>/g, '')}
+            </p>
+            <button>Read more</button>
+          </div>
+        </article>
+      {/each}
+    {/if}
   </div>
 </div>
 
