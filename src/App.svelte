@@ -126,73 +126,79 @@
   }
 </style>
 
-<div class="bgimg1">
-  <div class="caption">
-    <img
-      class="zlogo"
-      width="75%"
-      height="75%"
-      src="https://drive.google.com/uc?export=download&id=1OQD-t5-CHCmGp1IqqVAAfVGLoIG1eouo"
-      alt="" />
-    <!-- <span class="border"> {name} </span> -->
-  </div>
-</div>
+<div class="full-container">
 
-<div
-  style="color: white;background-color:black;text-align:center;padding:50px
-  80px;text-align: justify;">
-  <h3 style="text-align:center;">About Me</h3>
-  {#await aboutMePromise}
-    <p>...waiting</p>
-  {:then aboutMe}
-    <p>
-      {@html aboutMe}
-    </p>
-  {:catch error}
-    <p style="color: red">{error.message}</p>
-  {/await}
-</div>
-
-<div class="bgimg2">
-  <h3 style="text-align:center; padding:50px 80px; color: white;">
-    Recent Reads
-  </h3>
-  <div class="cards-container">
-    {#if allPosts.length === 0}
-      <div class="caption">
-        <span class="border"> Comeback soon for posts! </span>
-      </div>
-    {:else}
-      {#each allPosts as post}
-        <article class="card">
-          <img src={post.coverPhoto} alt="Sample photo" />
-          <div class="text">
-            <h3>{post.title}</h3>
-            <p class="long-and-truncated">
-              {@html post.content.replace(/<[^>]*>/g, '')}
-            </p>
-            <button>Read more</button>
-          </div>
-        </article>
-      {/each}
-    {/if}
+  <div class="bgimg1">
+    <div class="caption">
+      <img
+        class="zlogo"
+        width="75%"
+        height="75%"
+        src="https://drive.google.com/uc?export=download&id=1OQD-t5-CHCmGp1IqqVAAfVGLoIG1eouo"
+        alt="" />
+      <!-- <span class="border"> {name} </span> -->
+    </div>
   </div>
-</div>
 
-<footer
-  style="color: white;background-color:black;text-align:center;padding:10px
-  10px;text-align: justify;">
-  <h3 style="text-align:center;">Contact Me</h3>
-  <div class="footerarea">
-    <a class="footeritem" href="mailto:zeddshaikh@gmail.com">
-      zeddshaikh@gmail.com
-    </a>
-    <a class="footeritem" href="https://www.instagram.com/zeddshaikh/">
-      instagram
-    </a>
-    <a class="footeritem" href="https://www.twitter.com/zeddshaikh/">twitter</a>
-    <a class="footeritem" href="https://www.reddit.com/user/zeddshaikh">
-      reddit
-    </a>
+  <div
+    style="color: white;background-color:black;text-align:center;padding:50px
+    80px;text-align: justify;">
+    <h3 style="text-align:center;">About Me</h3>
+    {#await aboutMePromise}
+      <p>...waiting</p>
+    {:then aboutMe}
+      <p>
+        {@html aboutMe}
+      </p>
+    {:catch error}
+      <p style="color: red">{error.message}</p>
+    {/await}
   </div>
-</footer>
+
+  <div class="bgimg2">
+    <h3 style="text-align:center; padding:50px 80px; color: white;">
+      Recent Reads
+    </h3>
+    <div class="cards-container">
+      {#if allPosts.length === 0}
+        <div class="caption">
+          <span class="border">Comeback soon for posts!</span>
+        </div>
+      {:else}
+        {#each allPosts as post}
+          <article class="card">
+            <img src={post.coverPhoto} alt="Sample photo" />
+            <div class="text">
+              <h3>{post.title}</h3>
+              <p class="long-and-truncated">
+                {@html post.content.replace(/<[^>]*>/g, '')}
+              </p>
+              <button>Read more</button>
+            </div>
+          </article>
+        {/each}
+      {/if}
+    </div>
+  </div>
+
+  <footer
+    style="color: white;background-color:black;text-align:center;padding:10px
+    10px;text-align: justify;">
+    <h3 style="text-align:center;">Contact Me</h3>
+    <div class="footerarea">
+      <a class="footeritem" href="mailto:zeddshaikh@gmail.com">
+        zeddshaikh@gmail.com
+      </a>
+      <a class="footeritem" href="https://www.instagram.com/zeddshaikh/">
+        instagram
+      </a>
+      <a class="footeritem" href="https://www.twitter.com/zeddshaikh/">
+        twitter
+      </a>
+      <a class="footeritem" href="https://www.reddit.com/user/zeddshaikh">
+        reddit
+      </a>
+    </div>
+  </footer>
+
+</div>
