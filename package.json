@@ -22,6 +22,6 @@
     "autobuild": "rollup -c -w",
     "dev": "run-p start:dev autobuild",
     "start:dev": "sirv public --single --dev",
-    "start": "node index.js"
+    "start": "sirv public --single",
   }
 }
