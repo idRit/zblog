@@ -1,10 +1,15 @@
-const express = require('express');
-const path = require('path');
+// server.js
+const { createServer } = require("http");
+const app = require("./dist/App.js");
 
-const app = express();
+createServer((req, res) => {
+  const { html } = app.render({ url: req.url });
 
-app.use(express.static(path.join(__dirname, 'public')));
+  res.write(`
+    <!DOCTYPE html>
+    <div id="app">${html}</div>
+    <script src="/dist/bundle.js"></script>
+  `);
 
-app.listen(process.env.PORT || 8080, () => {
-  console.log('App started');
-});
+  res.end();
+}).listen(process.env.PORT || 3000);
