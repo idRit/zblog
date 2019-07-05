@@ -3,6 +3,7 @@
 
   export let name;
   export let baseUrl;
+  export let url;
 
   import { onMount } from "svelte";
 

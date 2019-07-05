@@ -1,5 +1,6 @@
 <script>
   import { Router, Link, Route } from "svelte-routing";
+  
   import Post from "./components/Post.svelte";
   import Home from "./components/Home.svelte";
   import ErrorPage from "./components/Error.svelte";
@@ -10,7 +11,8 @@
 
   let props = {
     name: name,
-    baseUrl: baseUrl
+    baseUrl: baseUrl,
+    url: url
   }
 
   import { onMount } from "svelte";
@@ -19,6 +21,6 @@
 <Router {url}>
   <Route path="/"><Home {...props}/></Route>
   <Route path="*" component={ErrorPage}/>
-  <Route path="post/:id" component={Post} />
+  <Route path="post/:id"><Post {...props}/></Route>
 </Router>
 
