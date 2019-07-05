@@ -147,9 +147,7 @@
   {#await aboutMePromise}
     <p>...waiting</p>
   {:then aboutMe}
-    <p>
-      {@html aboutMe}
-    </p>
+    {@html aboutMe}
   {:catch error}
     <p style="color: red">{error.message}</p>
   {/await}
