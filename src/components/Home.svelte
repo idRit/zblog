@@ -7,6 +7,8 @@
 
   import { onMount } from "svelte";
 
+  import Card from "./Card.svelte";
+
   let aboutMe = "";
   let aboutMePromise = getAboutMe();
 
@@ -17,12 +19,13 @@
     return respo.content;
   }
 
+  function open() {}
+
   let allPosts = [];
   onMount(async () => {
     const res = await fetch(baseUrl + "api/getAllBlogs");
     allPosts = await res.json();
     allPosts.pop();
-    console.log(allPosts);
   });
 </script>
 
@@ -65,10 +68,18 @@
     margin: auto;
   }
 
+  .cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  }
+
   .footerarea {
     display: flex;
     text-align: center;
     display: block;
+    font-size: 16px;
+    letter-spacing: 5px;
   }
 
   .footeritem {
@@ -76,55 +87,17 @@
     box-sizing: border-box;
     margin-right: 5%;
     margin-top: 5%;
+    font-size: 16px;
+    letter-spacing: 5px;
   }
 
   .zlogo {
     margin: auto;
   }
 
-  .cards-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-  }
-
-  .card {
-    width: 200px;
-    margin: 10px;
-    border: 1px solid #ccc;
-    box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
-    color: aliceblue;
-  }
-  .card img {
-    max-width: 100%;
-  }
-  .card .text {
-    padding: 0 20px 20px;
-  }
-  .card .text > button {
-    background: gray;
-    border: 0;
-    color: white;
-    padding: 10px;
-    width: 100%;
-  }
-  .card:nth-child(1) {
-    width: 420px;
-  }
-  .long-and-truncated {
-    flex: 1;
-
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-  }
-
   @media only screen and (max-width: 480px) {
     .bgimg1 {
       background-image: url("https://drive.google.com/uc?export=download&id=1_JJZeI8seclFvmZKRodUi9PKflnfMXGM");
-    }
-    .card {
-      width: 420px;
     }
   }
 </style>
@@ -144,11 +117,13 @@
 <div
   style="color: white;background-color:black;text-align:center;padding:50px
   80px;text-align: justify;">
-  <h3 style="text-align:center;">About Me</h3>
+  <h3 style="text-align:center;font-size:24px; letter-spacing: 10px;">About Me</h3>
   {#await aboutMePromise}
     <p>...waiting</p>
   {:then aboutMe}
+    <div style="font-size:18px; letter-spacing: 2px;">
     {@html aboutMe}
+    </div>
   {:catch error}
     <p style="color: red">{error.message}</p>
   {/await}
@@ -165,16 +140,7 @@
       </div>
     {:else}
       {#each allPosts as post}
-        <article class="card">
-          <img src={post.coverPhoto} alt="Sample photo" />
-          <div class="text">
-            <h3>{post.title}</h3>
-            <p class="long-and-truncated">
-              {@html post.content.replace(/<[^>]*>/g, '')}
-            </p>
-            <button>Read more</button>
-          </div>
-        </article>
+        <Card coverPhoto={post.coverPhoto} title={post.title} content={post.content} id={post._id} />
       {/each}
     {/if}
   </div>
