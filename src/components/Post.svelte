@@ -27,6 +27,10 @@
 </script>
 
 <style>
+  .cont {
+    padding: 50px 80px;
+  }
+
   .footerarea {
     display: flex;
     text-align: center;
@@ -43,6 +47,11 @@
     font-size: 16px;
     letter-spacing: 5px;
   }
+  @media only screen and (max-width: 600px) {
+    .cont {
+      padding: 50px 10px;
+    }
+  }
 </style>
 
 {#await blogDataPromise}
@@ -54,13 +63,14 @@
     <Cover {...props} />
 
     <div
-      style="color: white;background-color:black;padding:50px
-      80px;font-size:16px; letter-spacing: 5px;">
+      style="color: white;background-color:black;font-size:16px; letter-spacing: 5px;"
+      class="cont"
+      >
       {@html `<style>
         @media only screen and (max-width: 480px) {
           img { 
-            width: 75%; 
-            height: 75%; 
+            width: 80%; 
+            height: 80%; 
           }
         }
       </style>` + blogData.content}

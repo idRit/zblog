@@ -95,12 +95,16 @@
     margin: auto;
   }
 
+  .cont {
+    padding: 50px 50px;
+  }
+
   @media only screen and (max-width: 480px) {
     .bgimg1 {
       background-image: url("https://drive.google.com/uc?export=download&id=1_JJZeI8seclFvmZKRodUi9PKflnfMXGM");
     }
-    .cen {
-      margin: 0, auto;
+    .cont {
+      padding: 50px 10px;
     }
   }
 </style>
@@ -117,9 +121,8 @@
   </div>
 </div>
 
-<div
-  style="color: white;background-color:black;text-align:center;padding:50px
-  80px;text-align: justify;">
+<div class="cont"
+  style="color: white;background-color:black;text-align:center;text-align: justify;">
   <h3 style="text-align:center;font-size:24px; letter-spacing: 10px;">
     About Me
   </h3>
@@ -144,15 +147,13 @@
         <span class="border">Comeback soon for posts!</span>
       </div>
     {:else}
-      <div class="cen">
-        {#each allPosts as post}
-          <Card
-            coverPhoto={post.coverPhoto}
-            title={post.title}
-            content={post.content}
-            id={post._id} />
-        {/each}
-      </div>
+      {#each allPosts as post}
+        <Card
+          coverPhoto={post.coverPhoto}
+          title={post.title}
+          content={post.content}
+          id={post._id} />
+      {/each}
     {/if}
   </div>
 </div>

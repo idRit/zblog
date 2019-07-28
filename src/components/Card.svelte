@@ -7,13 +7,13 @@
   import { navigate } from "svelte-routing";
 
   function open() {
-    navigate("/post/"+id, {});
+    navigate("/post/" + id, {});
   }
 </script>
 
 <style>
   .card {
-    width: 0.4px;
+    width: 200px;
     margin: 10px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -33,7 +33,7 @@
     width: 100%;
   }
   .card:nth-child(1) {
-    width: 0.5%;
+    width: 420px;
   }
   .long-and-truncated {
     flex: 1;
@@ -42,9 +42,9 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 600px) {
     .card {
-      width: 0.5%;
+      max-width: 90%;
     }
   }
 </style>
