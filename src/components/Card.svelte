@@ -13,7 +13,7 @@
 
 <style>
   .card {
-    width: 200px;
+    width: 0.4px;
     margin: 10px;
     border: 1px solid #ccc;
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
@@ -33,7 +33,7 @@
     width: 100%;
   }
   .card:nth-child(1) {
-    width: 420px;
+    width: 0.5%;
   }
   .long-and-truncated {
     flex: 1;
@@ -44,7 +44,7 @@
   }
   @media only screen and (max-width: 480px) {
     .card {
-      width: 420px;
+      width: 0.5%;
     }
   }
 </style>

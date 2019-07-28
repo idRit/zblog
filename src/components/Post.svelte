@@ -56,7 +56,14 @@
     <div
       style="color: white;background-color:black;padding:50px
       80px;font-size:16px; letter-spacing: 5px;">
-      {@html blogData.content}
+      {@html `<style>
+        @media only screen and (max-width: 480px) {
+          img { 
+            width: 75%; 
+            height: 75%; 
+          }
+        }
+      </style>` + blogData.content}
     </div>
 
     <footer

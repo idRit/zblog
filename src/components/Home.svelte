@@ -99,6 +99,9 @@
     .bgimg1 {
       background-image: url("https://drive.google.com/uc?export=download&id=1_JJZeI8seclFvmZKRodUi9PKflnfMXGM");
     }
+    .cen {
+      margin: 0, auto;
+    }
   }
 </style>
 
@@ -117,12 +120,14 @@
 <div
   style="color: white;background-color:black;text-align:center;padding:50px
   80px;text-align: justify;">
-  <h3 style="text-align:center;font-size:24px; letter-spacing: 10px;">About Me</h3>
+  <h3 style="text-align:center;font-size:24px; letter-spacing: 10px;">
+    About Me
+  </h3>
   {#await aboutMePromise}
     <p>...waiting</p>
   {:then aboutMe}
     <div style="font-size:18px; letter-spacing: 2px;">
-    {@html aboutMe}
+      {@html aboutMe}
     </div>
   {:catch error}
     <p style="color: red">{error.message}</p>
@@ -139,9 +144,15 @@
         <span class="border">Comeback soon for posts!</span>
       </div>
     {:else}
-      {#each allPosts as post}
-        <Card coverPhoto={post.coverPhoto} title={post.title} content={post.content} id={post._id} />
-      {/each}
+      <div class="cen">
+        {#each allPosts as post}
+          <Card
+            coverPhoto={post.coverPhoto}
+            title={post.title}
+            content={post.content}
+            id={post._id} />
+        {/each}
+      </div>
     {/if}
   </div>
 </div>
