@@ -37,14 +37,13 @@
   }
   .long-and-truncated {
     flex: 1;
-
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
   @media only screen and (max-width: 600px) {
     .card {
-      max-width: 90%;
+      max-width: 100%;
     }
   }
 </style>
