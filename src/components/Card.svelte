@@ -41,7 +41,7 @@
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  @media only screen and (max-width: 600px) {
+  @media only screen and (max-width: 480px) {
     .card {
       max-width: 420px;
     }
