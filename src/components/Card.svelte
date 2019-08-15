@@ -43,7 +43,7 @@
   }
   @media only screen and (max-width: 600px) {
     .card {
-      max-width: 100%;
+      max-width: 420px;
     }
   }
 </style>
