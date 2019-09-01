@@ -2,6 +2,7 @@ html, body {
 	height: 100%;
 	margin: 0;
 	/* font: myFirstFont; */
+	font-family: "Comic Sans MS", "Comic Sans", cursive;
 	overflow-x: hidden;
 }
  
