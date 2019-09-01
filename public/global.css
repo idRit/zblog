@@ -1,8 +1,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	/* font: myFirstFont; */
-	font-family: "Comic Sans MS", "Comic Sans", cursive;
+	font: myFirstFont;
 	overflow-x: hidden;
 }
  
@@ -55,15 +54,15 @@ button:focus {
 	border-color: #666;
 }
 
-/* @font-face {
-	font-family: myFirstFont;
+@font-face {
+	font-family: myFirstFont; 
 	src: url(Retro\ Gaming.ttf);
-} */
+}
 
-/* * {
+* {
 	font-family: myFirstFont;
-	font-weight: 100;
-} */
+	font-weight: 60;
+}
 
 body {
 	background-color: black;
