@@ -1,7 +1,7 @@
 html, body {
 	height: 100%;
 	margin: 0;
-	font: myFirstFont;
+	/* font: myFirstFont; */
 	overflow-x: hidden;
 }
  
@@ -54,10 +54,10 @@ button:focus {
 	border-color: #666;
 }
 
-@font-face {
+/* @font-face {
 	font-family: myFirstFont;
 	src: url(Retro\ Gaming.ttf);
-}
+} */
 
 * {
 	font-family: myFirstFont;

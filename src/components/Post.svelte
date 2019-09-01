@@ -63,7 +63,7 @@
     <Cover {...props} />
 
     <div
-      style="color: white;background-color:black;font-size:16px; letter-spacing: 5px;"
+      style="color: white;background-color:black;"
       class="cont"
       >
       {@html `<style>
