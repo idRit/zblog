@@ -46,7 +46,8 @@
   }
 
   .bgimg2 {
-    background-image: url("https://scontent-lga3-1.cdninstagram.com/vp/7a2e4ad2db9f83ffa243edf413692bc5/5DC28F92/t51.2885-15/e35/41339795_471036513381082_6857434592559759360_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com");
+    /* background-image: url("https://scontent-lga3-1.cdninstagram.com/vp/7a2e4ad2db9f83ffa243edf413692bc5/5DC28F92/t51.2885-15/e35/41339795_471036513381082_6857434592559759360_n.jpg?_nc_ht=scontent-lga3-1.cdninstagram.com"); */
+    background-color: #111;
     min-height: 100%;
   }
 
