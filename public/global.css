@@ -59,10 +59,10 @@ button:focus {
 	src: url(Retro\ Gaming.ttf);
 } */
 
-* {
+/* * {
 	font-family: myFirstFont;
 	font-weight: 100;
-}
+} */
 
 body {
 	background-color: black;
