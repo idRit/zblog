@@ -15,7 +15,7 @@
   async function getAboutMe() {
     const res = await fetch(baseUrl + "api/getBlogByTitle/aboutMe");
     let respo = await res.json();
-    console.log(respo.content);
+    //console.log(respo.content);
     return respo.content;
   }
 
@@ -105,6 +105,9 @@
     }
     .cont {
       padding: 50px 10px;
+    }
+    .cards-container {
+      padding-right: 21px;
     }
   }
 </style>

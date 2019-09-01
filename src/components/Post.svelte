@@ -17,7 +17,7 @@
   async function getBlogData() {
     id = window.location.href;
     id = id.split("post/")[1];
-    console.log(id);
+    //console.log(id);
     let res = await fetch(baseUrl + "api/getBlogById/" + id);
     let blog = await res.json();
     props.image = blog.coverPhoto;

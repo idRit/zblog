@@ -15,7 +15,7 @@
   .card {
     width: 200px;
     margin: 10px;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     box-shadow: 2px 2px 6px 0px rgba(0, 0, 0, 0.3);
     color: aliceblue;
   }
@@ -43,7 +43,7 @@
   }
   @media only screen and (max-width: 480px) {
     .card {
-      max-width: 420px;
+      max-width: 100%;
     }
   }
 </style>
