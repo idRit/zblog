@@ -72,7 +72,7 @@
   .cards-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: stretch;
+    /* align-items: stretch; */
   }
 
   .footerarea {
