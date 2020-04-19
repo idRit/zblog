@@ -33,10 +33,10 @@
     console.log(id);
     if (typeof localStorage[id] == "undefined") {
       localStorage[id] = true;
-      console.log("alreadyin");
-    } else {
       let res = await (await fetch(baseUrl + "api/updateViewCunt/" + id)).json();
       console.log(res.success);
+    } else {
+      console.log("alreadyin");
     }
   }
 </script>
