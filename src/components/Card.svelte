@@ -32,18 +32,22 @@
     padding: 10px;
     width: 100%;
   }
+
   .card:nth-child(1) {
     width: 420px;
   }
+
   .long-and-truncated {
     flex: 1;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
   }
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 494px) {
+
     .card {
       max-width: 100%;
+      width: 420px;
     }
   }
 </style>

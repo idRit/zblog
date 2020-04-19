@@ -17,12 +17,27 @@
   async function getBlogData() {
     id = window.location.href;
     id = id.split("post/")[1];
-    //console.log(id);
+
     let res = await fetch(baseUrl + "api/getBlogById/" + id);
     let blog = await res.json();
+    
     props.image = blog.coverPhoto;
     props.title = blog.title;
+
+    counterBookKeeping(id);
+
     return blog;
+  }
+
+  async function counterBookKeeping(id) {
+    console.log(id);
+    if (typeof localStorage[id] == "undefined") {
+      localStorage[id] = true;
+      console.log("alreadyin");
+    } else {
+      let res = await (await fetch(baseUrl + "api/updateViewCunt/" + id)).json();
+      console.log(res.success);
+    }
   }
 </script>
 
@@ -47,6 +62,7 @@
     font-size: 16px;
     letter-spacing: 5px;
   }
+
   @media only screen and (max-width: 600px) {
     .cont {
       padding: 50px 10px;

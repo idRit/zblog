@@ -148,7 +148,7 @@
   <div class="cards-container">
     {#if allPosts.length === 0}
       <div class="caption">
-        <span class="border">Comeback soon for posts!</span>
+        <span class="border">... loading</span>
       </div>
     {:else}
       {#each allPosts as post}
